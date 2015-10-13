@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Hello WLP</title>
+</head>
+<h:body>
+	<h1>Hello WLP</h1>
+	<h:form>
+		<h:messages/>
+		<h:inputText value="#{helloWlpAction.name}">
+		</h:inputText>
+		<h:commandButton action="#{helloWlpAction.doHello}">
+		</h:commandButton><br></br>
+		msg=<h:outputText value="#{helloWlpAction.msg}">
+		</h:outputText>
+	</h:form>
+</h:body>
+</html>

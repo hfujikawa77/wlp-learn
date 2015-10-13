@@ -1,0 +1,41 @@
+drop table DB2ADMIN.HELLO_WLP_MSG
+create table DB2ADMIN.HELLO_WLP_MSG (MSG_ID int not null GENERATED ALWAYS AS IDENTITYÅ@(START WITH 1 INCREMENT BY 1 NO CACHE), MSG char(20), UPDATED TIMESTAMP)
+alter table DB2ADMIN.HELLO_WLP_MSG add primary key(MSG_ID)
+
+    <jdbcDriver id="db2Driver001">
+        <library>
+            <fileset dir="C:\IBM\SQLLIB\java" includes="db2jcc.jar, db2jcc_license_cu.jar"/>
+        </library>
+    </jdbcDriver>
+    <dataSource id="db2Con001" jdbcDriverRef="db2Driver001" jndiName="jdbc/db2Con001">
+    	<properties.db2.jcc databaseName="SAMPLE" password="db2admin" user="db2admin"/>
+    </dataSource>
+
+    <jdbcDriver id="db2Driver001">
+        <library>
+            <fileset dir="C:\IBM\SQLLIB\java" includes="db2jcc.jar, db2jcc_license_cu.jar"/>
+        </library>
+    </jdbcDriver>
+    <dataSource id="db2Con001" jdbcDriverRef="db2Driver001" jndiName="jdbc/db2Con001">
+    	<properties.db2.jcc databaseName="SAMPLE" password="db2admin" user="db2admin"/>
+    </dataSource>
+
+    {
+  "sqldb": [
+    {
+      "name": "mySQLDB",
+      "label": "sqldb",
+      "plan": "sqldb_free",
+      "credentials": {
+        "port": 50000,
+        "db": "SQLDB",
+        "username": "user08791",
+        "host": "75.126.155.153",
+        "hostname": "75.126.155.153",
+        "jdbcurl": "jdbc:db2://75.126.155.153:50000/SQLDB",
+        "uri": "db2://user08791:4O5jZ3lc7Pr0@75.126.155.153:50000/SQLDB",
+        "password": "4O5jZ3lc7Pr0"
+      }
+    }
+  ]
+}

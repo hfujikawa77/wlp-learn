@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://jws.b.a/" targetNamespace="http://jws.b.a/" version="1.0">
+
+  <xs:element name="delete" type="tns:delete"/>
+
+  <xs:element name="deleteResponse" type="tns:deleteResponse"/>
+
+  <xs:element name="entry" type="tns:entry"/>
+
+  <xs:element name="entryResponse" type="tns:entryResponse"/>
+
+  <xs:element name="findAll" type="tns:findAll"/>
+
+  <xs:element name="findAllResponse" type="tns:findAllResponse"/>
+
+  <xs:element name="hello" type="tns:hello"/>
+
+  <xs:element name="helloResponse" type="tns:helloResponse"/>
+
+  <xs:complexType name="entry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="entryResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:helloWlpMsg"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="helloWlpMsg">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="msg" type="xs:string"/>
+      <xs:element name="msgId" type="xs:int"/>
+      <xs:element minOccurs="0" name="updated" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="hello">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="helloResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="delete">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:helloWlpMsg"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="findAll">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="findAllResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:helloWlpMsg"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
