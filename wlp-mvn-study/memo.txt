@@ -1,0 +1,24 @@
+mvn install:install-file -Dfile=C:\Users\IBM_ADMIN\Downloads\wlp-javaee7-8.5.5.6.zip -DgroupId=mystudy.wlp -DartifactId=wlp-javaee7 -Dversion=8.5.5.6 -Dpackaging=zip
+
+http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/rwlp_maven_artifact.html?cp=SSEQTP_8.5.5&lang=ja
+
+
+					<!-- <assemblyArchive>C:\Users\IBM_ADMIN\Downloads\wlp-javaee7-8.5.5.6.zip</assemblyArchive> -->
+					<!-- <assemblyArtifact> -->
+					<!-- <groupId>mystudy.wlp</groupId> -->
+					<!-- <artifactId>wlp-javaee7</artifactId> -->
+					<!-- <version>8.5.5.6</version> -->
+					<!-- <type>zip</type> -->
+					<!-- </assemblyArtifact> -->
+
+list of features.
+
+https://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_feat.html
+
+download local-repo
+http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/twlp_ins_installUtilitydl.html?cp=SSEQTP_8.5.5&lang=ja
+installUtility download webProfile-6.0 --location=c:\temp\download
+
+installUtility download webProfile-6.0 jaxb-2.2 jaxrs-1.1 jaxws-2.2 jca-1.6 jms-1.1 jmsMdb-3.1 mdb-3.1 wasJmsClient-1.1 wasJmsSecurity-1.0 wasJmsServer-1.0 wmqJmsClient-1.1 --location=c:\temp\download --acceptLicence
+installUtility download javaee-7.0 --location=c:\temp\download --acceptLicence
+

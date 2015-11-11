@@ -1,0 +1,69 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>study.wlp.mvn</groupId>
+	<artifactId>wlp-mvn-study</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>net.wasdev.wlp.maven.plugins</groupId>
+				<artifactId>liberty-maven-plugin</artifactId>
+				<version>1.1-SNAPSHOT</version>
+				<executions>
+					<execution>
+						<id>install-server</id>
+						<phase>pre-integration-test</phase>
+						<goals>
+							<goal>stop-server</goal>
+							<!-- <goal>clean</goal> -->
+							<goal>install-server</goal>
+							<goal>create-server</goal>
+							<goal>start-server</goal>
+						</goals>
+						<!-- <configuration> -->
+						<!-- <type>javaee7</type> -->
+						<!-- </configuration> -->
+					</execution>
+				</executions>
+				<configuration>
+					<features>
+						<acceptLicense>true</acceptLicense>
+						<feature>webProfile-6.0</feature>
+						<feature>jaxb-2.2</feature>
+						<feature>jaxrs-1.1</feature>
+						<feature>jaxws-2.2</feature>
+						<feature>jca-1.6</feature>
+						<feature>jms-1.1</feature>
+						<feature>jmsMdb-3.1</feature>
+						<feature>mdb-3.1</feature>
+						<feature>wasJmsClient-1.1</feature>
+						<feature>wasJmsSecurity-1.0</feature>
+						<feature>wasJmsServer-1.0</feature>
+						<feature>wmqJmsClient-1.1</feature>
+					</features>
+					<!-- from Liberty repository. -->
+					<!-- <install> -->
+					<!-- <type>kernel</type> -->
+					<!-- <licenseCode>L-MCAO-9SYMVC</licenseCode> -->
+					<!-- <type>javaee7</type> -->
+					<!-- <licenseCode>L-JTHS-95XRL8</licenseCode> -->
+					<!-- </install> -->
+					<installDirectory>
+						C:\IBM\WebSphere\wlp-javaee7-8.5.5.6\wlp
+					</installDirectory>
+					<!-- <assemblyArchive>C:\Users\IBM_ADMIN\Downloads\wlp-javaee7-8.5.5.6.zip</assemblyArchive> -->
+					<!-- from IBM Maven Repo. -->
+					<!-- <assemblyArtifact> -->
+					<!-- <groupId>mystudy.wlp</groupId> -->
+					<!-- <artifactId>wlp-javaee7</artifactId> -->
+					<!-- <version>8.5.5.6</version> -->
+					<!-- <type>zip</type> -->
+					<!-- </assemblyArtifact> -->
+					<!-- <configFile>src/main/wlp/server.xml</configFile> -->
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
