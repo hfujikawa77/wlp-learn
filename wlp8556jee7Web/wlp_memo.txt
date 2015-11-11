@@ -1,0 +1,10 @@
+pom for was runtime emulate.
+http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wdt.doc/topics/localrepo.htm
+
+install wlp as a Maven artifact.
+http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/rwlp_maven_artifact.html?cp=SSEQTP_8.5.5&lang=ja
+
+Liberty profile installation option is not set.
+
+IBM Maven repo
+http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/maven/repository/com/
