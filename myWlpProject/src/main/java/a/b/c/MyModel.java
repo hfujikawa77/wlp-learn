@@ -15,7 +15,7 @@ public class MyModel {
     public Object getValue() {
     	System.out.println("pre em.");
         Content content = em.find(Content.class, 1);
-        System.out.println("post em." + content);
+        System.out.println("post em. content=" + content);
         return content.getValue();
     }
 

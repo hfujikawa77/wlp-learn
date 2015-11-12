@@ -1,4 +1,4 @@
-1. execute command in Cmmand Prompt <br>
+## execute command in Cmmand Prompt
 ```bat
 set JAVA_HOME=<jdk installed directory>
 set MAVEN_HOME=<maven installed directory>
@@ -14,6 +14,6 @@ mvn install
 start mvn -P was-liberty
 ```
 
-2. open a URL in browser <br>
-<http://localhost:8080/myWlpProject-1.0-SNAPSHOT/faces/index.xhtml>
+## open a URL in browser
+<http://localhost:8080/>
 
