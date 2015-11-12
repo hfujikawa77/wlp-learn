@@ -10,7 +10,6 @@ mvn -P flyway
 mvn -P hibernate-tools
 
 set MAVEN_REPO=<local maven repository directory>
-mvn install
 start mvn -P was-liberty
 ```
 
