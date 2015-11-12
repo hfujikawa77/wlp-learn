@@ -30,20 +30,21 @@
 
 	<!-- To access this server from a remote client add a host attribute to
 		the following element, e.g. host="*" -->
-	<httpEndpoint id="defaultHttpEndpoint" httpPort="8080"
-		httpsPort="9443" />
+	<httpEndpoint id="defaultHttpEndpoint" httpPort="${as.port}" />
 
 	<!-- TODO: datasource -->
 	<dataSource id="javaee7-min-ds" jndiName="jdbc/javaee7-min-ds"
 		type="javax.sql.XADataSource">
 		<jdbcDriver libraryRef="DerbyLib" />
 		<properties.derby.client createDatabase="create"
-			databaseName="myWlpProject-db" serverName="localhost" portNumber="1527"
-			user="app" password="app" />
+			databaseName="${db.name}" serverName="${db.host}" portNumber="${db.port}"
+			user="${db.username}" password="${db.password}" />
 	</dataSource>
 
 	<!-- <authData id="DerbyAuth" user="app" password="app" /> -->
 	<library id="DerbyLib">
-		<fileset dir="${env.MAVEN_REPO}\org\apache\derby\derbyclient\10.10.1.1" includes="derbyclient-10.10.1.1.jar" />
+		<fileset
+			dir="${env.MAVEN_REPO}\org\apache\derby\derbyclient\${derby.client.version}"
+			includes="derbyclient-${derby.client.version}.jar" />
 	</library>
 </server>

@@ -231,7 +231,24 @@
               </assemblyArtifact>
               <assemblyInstallDirectory>/opt/ibm</assemblyInstallDirectory>
               <configFile>${basedir}/tools/was-liberty/server.xml</configFile>
-              <appArchive>${project.build.directory}/${project.artifactId}-${project.version}.war</appArchive>
+<!--               <appArchive>${project.build.directory}/${project.build.finalName}.war</appArchive> -->
+              <bootstrapProperties>
+<!--                 <appLocation>${project.build.directory}/${project.build.finalName}</appLocation> -->
+                <derby.client.version>${derby.client.version}</derby.client.version>
+                <db.name>${db.name}</db.name>
+                <db.host>${db.host}</db.host>
+                <db.port>${db.port}</db.port>
+                <db.jdbc.url>${db.jdbc.url}</db.jdbc.url>
+                <db.username>${db.username}</db.username>
+                <db.password>${db.password}</db.password>
+                <as.port>${as.port}</as.port>
+              </bootstrapProperties>
+              <appArtifact>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>${project.artifactId}</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+               </appArtifact>
             </configuration>
           </plugin>
           <plugin>
@@ -248,14 +265,6 @@
           </plugin>
         </plugins>
       </build>
-      <dependencies>
-        <dependency>
-          <groupId>${project.groupId}</groupId>
-          <artifactId>${project.artifactId}</artifactId>
-          <version>${project.version}</version>
-          <type>war</type>
-        </dependency>
-      </dependencies>
       <repositories>
         <repository>
           <releases>
